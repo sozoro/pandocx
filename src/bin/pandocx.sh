@@ -12,4 +12,4 @@ if [ ! -f $docxTemplates/$template ]; then
   template=$defaultTemplate
 fi
 
-pandoc $1 -o ${inputFileName%.*}.docx --reference-doc=$docxTemplates/$template
+pandoc $1 -o ${inputFileName%.*}.docx --reference-doc=$docxTemplates/$template ${@:3}
